@@ -1,16 +1,14 @@
-title : Blog Title
-tagline: Blog Tagline
+title : Tyche's Games
+tagline: Your Friendly Local Game Store
 author :
-  name : Firstname Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
-  feedburner : feedname
+  name : Sean Holland
+  email : sean@tychesgames.com
+  twitter : tychesgames
 
 navigation :
-  - archive.html
-  - tags.html
-  - categories.html
-  - pages.html
-  - about.md
+  - news.md
+  - chat.md
+  - events.md
+  - location-hours.md
+  - resources.md
   
