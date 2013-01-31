@@ -19,7 +19,7 @@ production_url: "http://tychesgames.com"
 base_path: "/"
 
 theme:
-  name: "slate"
+  name: "tychesgames"
 
 posts:
   permalink: "/:categories/:title/"
