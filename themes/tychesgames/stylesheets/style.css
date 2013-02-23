@@ -72,3 +72,11 @@ body {
   border:1px solid #4C964D;
   color:#FFF;
 }
+
+/* Rotator */
+
+#rotator-wrapper {
+  text-align: center;
+  margin: 10px auto 10px auto;
+  padding: 12px;
+}

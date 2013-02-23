@@ -288,6 +288,37 @@
 	</div>
         <div class="span8">
           <div class="content">
+
+
+		<div id="rotator-wrapper" class="well">
+			<div id="rotator">
+				<img src="/assets/tychesgames/media/photo1.jpg" width="300" />
+				<img src="/assets/tychesgames/media/photo2.jpg" width="300" />
+				<img src="/assets/tychesgames/media/photo3.jpg" width="300" />
+				<img src="/assets/tychesgames/media/photo4.jpg" width="300" />
+				<img src="/assets/tychesgames/media/photo5.jpg" width="300" />
+			</div>
+			<script>
+				$(document).ready(function() {
+					$("#rotator").carouFredSel({
+						items				: 3,
+						direction			: "left",
+						align				: "center",
+						width				: "100%",
+						scroll : {
+							items			: 1,
+							//easing			: "elastic",
+							duration		: 1200,	
+							pauseOnHover	: true
+						}					
+					});	
+				});
+			</script>
+		</div>
+
+
+
+
             <div class="tabbable">
               <ul class="nav nav-tabs">
                 {{# data.navigation?to_pages }}
