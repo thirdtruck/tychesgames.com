@@ -2,6 +2,7 @@
   "stylesheets" : {
     "default" : [
       "bootstrap.min.css",
+      "bootstrap-responsive.min.css",
       "style.css"
     ],
    
