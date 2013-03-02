@@ -35,7 +35,9 @@
           <a class="brand" href="{{urls.base_path}}">{{ data.title }}</a>
           <ul class="nav">
             {{# data.navigation?to_pages }}
-              {{> pages_list }}
+              <li class="{{ css_class }}">
+              <a href="#{{{ html_id }}}" data-toggle="tab">{{{ title }}}</a>
+              </li>
             {{/ data.navigation?to_pages }}
           </ul>
         </div>
