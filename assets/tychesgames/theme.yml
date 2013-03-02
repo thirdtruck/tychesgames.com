@@ -1,0 +1,35 @@
+{
+  "stylesheets" : {
+    "default" : [
+      "bootstrap.min.css",
+      "style.css"
+    ],
+   
+    "widgets" : {
+      "google_prettify" : "twitter-bootstrap.css"
+    }
+    
+  },
+
+  "javascripts" : {
+    "default" : [
+      "jquery.min.js",
+      "bootstrap.min.js",
+      "jquery.carouFredSel-6.2.0-packed.js",
+      "jquery.mousewheel.min.js",
+      "jquery.touchSwipe.min.js",
+      "jquery.transit.min.js",
+      "main.js"
+    ],
+    "development" : [
+      "jquery.js",
+      "bootstrap.js",
+      "main.js"
+    ]
+  },
+  
+  "manifest" : {
+    "author" : "Jacob Thornton and Mark Otto",
+    "website" : "http://twitter.github.com/bootstrap"
+  }
+}

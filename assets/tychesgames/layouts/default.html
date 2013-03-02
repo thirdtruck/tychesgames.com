@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{# page.description }}
+    <meta name="description" content="{{ . }}">
+  {{/ page.description }}
+    <meta name="author" content="{{ data.author.name }}">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    {{{ stylesheets.all }}}
+    {{{ javascripts.all }}}
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="{{urls.base_path}}">{{ data.title }}</a>
+          <ul class="nav">
+            {{# data.navigation?to_pages }}
+              {{> pages_list }}
+            {{/ data.navigation?to_pages }}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+
+      <div class="row-fluid">
+        <div class="span2">
+	  <div class="well">
+  	  {{! widgets.mailchimp }}
+  
+            <!-- MailChimp Signup Form -->
+            <link href="http://cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+            <style type="text/css">
+		    #mc_embed_signup form {
+			    padding-top: 0;
+		    }
+		    #mc_embed_signup h2 {
+			    margin-top: 0;
+			    margin-bottom: 0;
+		    }
+		    #mc_embed_signup .indicates-required .asterisk {
+			    position: relative;
+			    top: 5px;
+		    }
+		    #mc_embed_signup .mc-field-group .asterisk {
+			    top: 30px;
+		    }
+		    #mc_embed_signup .mc-field-group label {
+		    }
+		    #mc_embed_signup .mc-field-group.input-group label {
+			    position: relative;
+			    top: 3px;
+			    margin-left: 3px;
+			    color: #317EAC;
+		    }
+            	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+            	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+            </style>
+            <div id="mc_embed_signup">
+            <form action="http://tychesgames.us6.list-manage.com/subscribe/post?u=3251bca430e27198cac80309a&amp;id=9bb58ea5b4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            	<h2>Subscribe to our mailing list</h2>
+            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+            <div class="mc-field-group">
+            	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+            </label>
+            	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+            </div>
+            <div class="mc-field-group">
+            	<label for="mce-FNAME">First Name </label>
+            	<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+            </div>
+            <div class="mc-field-group input-group">
+                <strong>Your Favorite Games </strong>
+                <ul><li><input type="checkbox" value="1" name="group[5313][1]" id="mce-group[5313]-5313-0"><label for="mce-group[5313]-5313-0">Card Games</label></li>
+            <li><input type="checkbox" value="2" name="group[5313][2]" id="mce-group[5313]-5313-1"><label for="mce-group[5313]-5313-1">Board Games</label></li>
+            <li><input type="checkbox" value="4" name="group[5313][4]" id="mce-group[5313]-5313-2"><label for="mce-group[5313]-5313-2">Roleplaying Games</label></li>
+            <li><input type="checkbox" value="8" name="group[5313][8]" id="mce-group[5313]-5313-3"><label for="mce-group[5313]-5313-3">Miniature Games</label></li>
+            </ul>
+            </div>
+            <div class="mc-field-group input-group">
+                <strong>Email Format </strong>
+                <ul><li><input type="radio" value="html" name="EMAILTYPE" id="mce-EMAILTYPE-0"><label for="mce-EMAILTYPE-0">html</label></li>
+            <li><input type="radio" value="text" name="EMAILTYPE" id="mce-EMAILTYPE-1"><label for="mce-EMAILTYPE-1">text</label></li>
+            <li><input type="radio" value="mobile" name="EMAILTYPE" id="mce-EMAILTYPE-2"><label for="mce-EMAILTYPE-2">mobile</label></li>
+            </ul>
+            </div>
+            	<div id="mce-responses" class="clear">
+            		<div class="response" id="mce-error-response" style="display:none"></div>
+            		<div class="response" id="mce-success-response" style="display:none"></div>
+            	</div>	<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+            </form>
+            </div>
+            <script type="text/javascript">
+            var fnames = new Array();var ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';
+            try {
+                var jqueryLoaded=jQuery;
+                jqueryLoaded=true;
+            } catch(err) {
+                var jqueryLoaded=false;
+            }
+            var head= document.getElementsByTagName('head')[0];
+            if (!jqueryLoaded) {
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js';
+                head.appendChild(script);
+                if (script.readyState && script.onload!==null){
+                    script.onreadystatechange= function () {
+                          if (this.readyState == 'complete') mce_preload_check();
+                    }    
+                }
+            }
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = 'http://downloads.mailchimp.com/js/jquery.form-n-validate.js';
+            head.appendChild(script);
+            var err_style = '';
+            try{
+                err_style = mc_custom_error_style;
+            } catch(e){
+                err_style = '#mc_embed_signup input.mce_inline_error{border-color:#6B0505;} #mc_embed_signup div.mce_inline_error{margin: 0 0 1em 0; padding: 5px 10px; background-color:#6B0505; font-weight: bold; z-index: 1; color:#fff;}';
+            }
+            var head= document.getElementsByTagName('head')[0];
+            var style= document.createElement('style');
+            style.type= 'text/css';
+            if (style.styleSheet) {
+              style.styleSheet.cssText = err_style;
+            } else {
+              style.appendChild(document.createTextNode(err_style));
+            }
+            head.appendChild(style);
+            setTimeout('mce_preload_check();', 250);
+            
+            var mce_preload_checks = 0;
+            function mce_preload_check(){
+                if (mce_preload_checks>40) return;
+                mce_preload_checks++;
+                try {
+                    var jqueryLoaded=jQuery;
+                } catch(err) {
+                    setTimeout('mce_preload_check();', 250);
+                    return;
+                }
+                try {
+                    var validatorLoaded=jQuery("#fake-form").validate({});
+                } catch(err) {
+                    setTimeout('mce_preload_check();', 250);
+                    return;
+                }
+                mce_init_form();
+            }
+            function mce_init_form(){
+                jQuery(document).ready( function($) {
+                  var options = { errorClass: 'mce_inline_error', errorElement: 'div', onkeyup: function(){}, onfocusout:function(){}, onblur:function(){}  };
+                  var mce_validator = $("#mc-embedded-subscribe-form").validate(options);
+                  $("#mc-embedded-subscribe-form").unbind('submit');//remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
+                  options = { url: 'http://tychesgames.us6.list-manage.com/subscribe/post-json?u=3251bca430e27198cac80309a&id=9bb58ea5b4&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
+                                beforeSubmit: function(){
+                                    $('#mce_tmp_error_msg').remove();
+                                    $('.datefield','#mc_embed_signup').each(
+                                        function(){
+                                            var txt = 'filled';
+                                            var fields = new Array();
+                                            var i = 0;
+                                            $(':text', this).each(
+                                                function(){
+                                                    fields[i] = this;
+                                                    i++;
+                                                });
+                                            $(':hidden', this).each(
+                                                function(){
+                                                    var bday = false;
+                                                    if (fields.length == 2){
+                                                        bday = true;
+                                                        fields[2] = {'value':1970};//trick birthdays into having years
+                                                    }
+                                                	if ( fields[0].value=='MM' && fields[1].value=='DD' && (fields[2].value=='YYYY' || (bday && fields[2].value==1970) ) ){
+                                                		this.value = '';
+            									    } else if ( fields[0].value=='' && fields[1].value=='' && (fields[2].value=='' || (bday && fields[2].value==1970) ) ){
+                                                		this.value = '';
+            									    } else {
+            									        if (/\[day\]/.test(fields[0].name)){
+                	                                        this.value = fields[1].value+'/'+fields[0].value+'/'+fields[2].value;									        
+            									        } else {
+                	                                        this.value = fields[0].value+'/'+fields[1].value+'/'+fields[2].value;
+            	                                        }
+            	                                    }
+                                                });
+                                        });
+                                    return mce_validator.form();
+                                }, 
+                                success: mce_success_cb
+                            };
+                  $('#mc-embedded-subscribe-form').ajaxForm(options);
+                  
+                  
+                });
+            }
+            function mce_success_cb(resp){
+                $('#mce-success-response').hide();
+                $('#mce-error-response').hide();
+                if (resp.result=="success"){
+                    $('#mce-'+resp.result+'-response').show();
+                    $('#mce-'+resp.result+'-response').html(resp.msg);
+                    $('#mc-embedded-subscribe-form').each(function(){
+                        this.reset();
+                	});
+                } else {
+                    var index = -1;
+                    var msg;
+                    try {
+                        var parts = resp.msg.split(' - ',2);
+                        if (parts[1]==undefined){
+                            msg = resp.msg;
+                        } else {
+                            i = parseInt(parts[0]);
+                            if (i.toString() == parts[0]){
+                                index = parts[0];
+                                msg = parts[1];
+                            } else {
+                                index = -1;
+                                msg = resp.msg;
+                            }
+                        }
+                    } catch(e){
+                        index = -1;
+                        msg = resp.msg;
+                    }
+                    try{
+                        if (index== -1){
+                            $('#mce-'+resp.result+'-response').show();
+                            $('#mce-'+resp.result+'-response').html(msg);            
+                        } else {
+                            err_id = 'mce_tmp_error_msg';
+                            html = '<div id="'+err_id+'" style="'+err_style+'"> '+msg+'</div>';
+                            
+                            var input_id = '#mc_embed_signup';
+                            var f = $(input_id);
+                            if (ftypes[index]=='address'){
+                                input_id = '#mce-'+fnames[index]+'-addr1';
+                                f = $(input_id).parent().parent().get(0);
+                            } else if (ftypes[index]=='date'){
+                                input_id = '#mce-'+fnames[index]+'-month';
+                                f = $(input_id).parent().parent().get(0);
+                            } else {
+                                input_id = '#mce-'+fnames[index];
+                                f = $().parent(input_id).get(0);
+                            }
+                            if (f){
+                                $(f).append(html);
+                                $(input_id).focus();
+                            } else {
+                                $('#mce-'+resp.result+'-response').show();
+                                $('#mce-'+resp.result+'-response').html(msg);
+                            }
+                        }
+                    } catch(e){
+                        $('#mce-'+resp.result+'-response').show();
+                        $('#mce-'+resp.result+'-response').html(msg);
+                    }
+                }
+            }
+            
+            </script>
+          <!--End mc_embed_signup-->
+          </div> 
+	</div>
+        <div class="span8">
+          <div class="content">
+
+
+		<div id="rotator-wrapper" class="well">
+			<div id="rotator">
+				<img src="/assets/tychesgames/media/photo1.jpg" width="300" />
+				<img src="/assets/tychesgames/media/photo2.jpg" width="300" />
+				<img src="/assets/tychesgames/media/photo3.jpg" width="300" />
+				<img src="/assets/tychesgames/media/photo4.jpg" width="300" />
+				<img src="/assets/tychesgames/media/photo5.jpg" width="300" />
+			</div>
+			<script>
+				$(document).ready(function() {
+					$("#rotator").carouFredSel({
+						items				: 3,
+						direction			: "left",
+						align				: "center",
+						width				: "100%",
+						scroll : {
+							items			: 1,
+							//easing			: "elastic",
+							duration		: 1200,	
+							pauseOnHover	: true
+						}					
+					});	
+				});
+			</script>
+		</div>
+
+
+
+
+            <div class="tabbable">
+              <ul class="nav nav-tabs">
+                {{# data.navigation?to_pages }}
+                  <li class="{{ css_class }}">
+                  <a href="#{{{ html_id }}}" data-toggle="tab">{{{ title }}}</a>
+                  </li>
+                {{/ data.navigation?to_pages }}
+              </ul>
+              
+              <div class="tab-content">
+                {{# data.navigation?to_pages }}
+                  <div class="tab-pane {{ css_class }}" id="{{{ html_id }}}">
+                    {{{ content }}}
+                  </div>
+                {{/ data.navigation?to_pages }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="span2">
+          <div class="well">
+            <dt>
+            Location:
+            </dt>
+            <dd>
+              <a href="http://maps.google.com/maps?f=q&amp;hl=en&amp;q=1056+S+Lumpkin+Street+Athens,+GA&amp;ll=33.946849,-83.378506&amp;spn=0.017088,0.042915" target="_blank">Google Maps</a>
+            </dd>
+            <dd>
+              <a href="http://maps.yahoo.com/py/maps.py?Pyt=Tmap&amp;addr=1056+S+Lumpkin+St&amp;city=Athens&amp;state=GA&amp;zip=30605-5121&amp;country=us&amp;slt=33.946700&amp;sln=-83.378500&amp;mag=1&amp;cs=9&amp;name=&amp;desc=&amp;BFCat=&amp;BFClient=" target="_blank">Yahoo! Maps</a>
+            </dd>
+            <dd>
+              <a href="http://www.mapquest.com/maps/map.adp?searchtype=address&amp;country=US&amp;addtohistory=&amp;searchtab=home&amp;formtype=address&amp;popflag=0&amp;latitude=&amp;longitude=&amp;name=&amp;phone=&amp;level=&amp;cat=&amp;address=1056+S.+Lumpkin+Street&amp;city=Athens&amp;state=GA&amp;zipcode=30605" target="_blank">MapQuest</a>
+            </dd>
+            <dt>
+            Hours:
+            </dt>
+            <dd>
+              Mon-Sat, 11am - 6pm
+            </dd>
+            <dd>
+              Closed Sunday
+            </dd>
+            <dt>
+            Phone:
+            </dt>
+            <dd>
+              706-354-4500
+            </dd>
+	    <!--
+            <dt>
+            Live Chat:
+            </dt>
+            <dd>
+              Click here to join.
+            </dd>
+	    -->
+            <dt>
+            E-mail:
+            </dt>
+            <dd>
+	      <a href="mailto:tyche@tychesgames.com">tyche@tychesgames.com</a>
+            </dd>
+            <dt>
+            Mail:
+            </dt>
+            <dd>
+              1056 S. Lumpkin Street
+            </dd>
+            <dd>
+              Athens, GA 30605 
+            </dd>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>&copy; 2013 {{ data.author.name }}
+          with help from <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">ruhoh</a>
+	  and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>.
+	  Website designed by <a href="http://slicedupfor.me/guests/tychesgames.html" target="_blank">James Holder</a>.
+        </p>
+      </div>
+
+    </div> <!-- /container -->
+
+    {{{ widgets.google_prettify }}}
+    {{{ widgets.analytics }}}
+  </body>
+</html>
