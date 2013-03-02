@@ -3,4 +3,4 @@ title : Events
 description:
 ---
 
-Event listings go here.
+Coming soon!
